@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beamcast — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1c1e; --muted: #5b5f63; --line: #e2e5e8;
+    --accent: #1a6b8a; --card: #f5f7f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121416; --fg: #e6e8ea; --muted: #a3a8ac; --line: #2a2e31;
+      --accent: #6fc3e0; --card: #1a1d1f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 24px 20px 64px; }
+  header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+  h1 { font-size: 1.6rem; margin: 0; }
+  h2 { font-size: 1.2rem; margin: 2em 0 .4em; padding-top: .4em; border-top: 1px solid var(--line); }
+  h2:first-of-type { border-top: 0; }
+  .meta { color: var(--muted); font-size: .95rem; margin: 0 0 1.2em; }
+  a { color: var(--accent); }
+  ul { padding-left: 1.2em; }
+  li { margin: .3em 0; }
+  .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .lang button {
+    border: 0; background: transparent; color: var(--muted); padding: 6px 14px;
+    font: inherit; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .item { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin: .5em 0; }
+  .item b { display: block; }
+  .item span { color: var(--muted); font-size: .95rem; }
+  code { background: var(--card); padding: 1px 5px; border-radius: 5px; font-size: .9em; }
+  [hidden] { display: none !important; }
+  footer { margin-top: 3em; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Beamcast</h1>
+    <div class="lang" role="group" aria-label="Language / Lingua">
+      <button id="btn-it" aria-pressed="true" onclick="setLang('it')">Italiano</button>
+      <button id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <!-- ITALIANO -->
+  <main id="it">
+    <h1 style="font-size:1.35rem">Informativa sulla privacy</h1>
+    <p class="meta">Versione 1.0 — 24 luglio 2026</p>
+    <p>Beamcast è un'app per Android che ti aiuta a trovare video e altri contenuti — sul web
+      o sul tuo telefono — e a trasmetterli su una TV o su un dispositivo compatibile
+      (Chromecast, Google Cast, DLNA/UPnP). Questa informativa spiega, in parole semplici,
+      quali dati Beamcast tratta e dove restano. Non è una consulenza legale.</p>
+
+    <h2>1. In sintesi</h2>
+    <ul>
+      <li>Beamcast <b>non ha account, non chiede registrazione, non ha pubblicità</b> e non ti profila.</li>
+      <li>I tuoi dati (cronologia, segnalibri, liste, preferenze) <b>restano su questo telefono</b>. Beamcast non ha un proprio server e non li invia a nessuno.</li>
+      <li>C'è <b>una sola eccezione</b>: la tecnologia Google Cast invia a Google alcuni dati tecnici e anonimi quando cerchi o usi un dispositivo di trasmissione. Non si può disattivare (punto 5).</li>
+      <li>Puoi cancellare i tuoi dati in qualsiasi momento dall'app o disinstallandola.</li>
+    </ul>
+
+    <h2>2. Chi gestisce Beamcast e come contattarci</h2>
+    <p>Beamcast è sviluppata da Marco Forlin. Per domande su questa informativa o sui tuoi
+      dati puoi scrivere a <a href="mailto:beamcast.app@gmail.com">beamcast.app@gmail.com</a>.</p>
+
+    <h2>3. Cosa Beamcast non fa</h2>
+    <ul>
+      <li><b>Nessun account e nessuna registrazione</b>: usi l'app senza fornire nome, email o telefono.</li>
+      <li><b>Nessun tracciamento pubblicitario</b>: niente reti di annunci né identificativi pubblicitari.</li>
+      <li><b>Nessuna analitica di Beamcast</b>: non raccogliamo statistiche d'uso né report di crash con strumenti nostri.</li>
+      <li><b>Nessun profilo</b> dei tuoi gusti o delle tue abitudini.</li>
+      <li><b>Nessun server di Beamcast</b> a cui mandare i tuoi dati.</li>
+    </ul>
+
+    <h2>4. I dati che restano sul tuo telefono</h2>
+    <p>Beamcast salva alcune informazioni <b>solo nella memoria privata dell'app</b>. Nessuno
+      di questi dati lascia il telefono.</p>
+    <div class="item"><b>Cronologia di navigazione</b><span>Indirizzi e titoli delle pagine visitate nel browser interno. Finché non la cancelli. Impostazioni → Browser → "Cancella la cronologia", o disattivi "Salva la cronologia".</span></div>
+    <div class="item"><b>Segnalibri</b><span>I siti che salvi. Finché li tieni. Rimozione del singolo segnalibro.</span></div>
+    <div class="item"><b>Liste "da guardare"</b><span>Titoli, indirizzi, copertine, avanzamento. Finché le tieni. Elimini la lista o il singolo elemento.</span></div>
+    <div class="item"><b>Punti di ripresa</b><span>Dove hai interrotto un contenuto. 90 giorni, massimo 200 voci. Impostazioni → Privacy → "Cancella i punti di ripresa".</span></div>
+    <div class="item"><b>Preferenze</b><span>Tema, motore di ricerca, secondi di salto, ecc. Finché l'app è installata. Disinstalli o "Cancella dati" del sistema.</span></div>
+    <div class="item"><b>Schede aperte del browser</b><span>Per ritrovare le pagine dopo un riavvio. Aggiornata a ogni cambio. Chiudi le schede o "Cancella dati".</span></div>
+    <div class="item"><b>Dati dei siti nella WebView</b><span>Cookie, memoria locale, cache dei siti. Gestita dalla WebView. "Cancella dati" del sistema.</span></div>
+    <div class="item"><b>Cache delle immagini</b><span>Copertine e anteprime. Temporanea, ripulita dal sistema. "Svuota cache".</span></div>
+
+    <h2>5. L'unica eccezione: Google Cast</h2>
+    <p>Per trovare e usare i dispositivi Chromecast e Google Cast, Beamcast usa il <b>Cast SDK</b>
+      di Google. Google dichiara che questo componente <b>raccoglie e invia a Google</b> alcuni
+      dati quando cerchi un dispositivo o avvii una trasmissione: eventi generici di rilevamento
+      e di sessione, informazioni sul dispositivo mobile e informazioni generiche sull'app che
+      trasmette. Secondo Google questi dati:</p>
+    <ul>
+      <li>sono <b>anonimi</b> e non collegati alla tua identità;</li>
+      <li>servono a capire l'utilizzo delle versioni del Cast SDK e a migliorare l'esperienza di trasmissione;</li>
+      <li><b>non si possono disattivare e non si possono cancellare</b> dall'app;</li>
+      <li>non vengono condivisi da Google con terze parti.</li>
+    </ul>
+    <p>Beamcast non decide quali dati partono e non può spegnere questo comportamento. Dettagli
+      nella <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure">dichiarazione di Google sul Cast SDK</a>.
+      I dispositivi <b>DLNA/UPnP</b> non usano il Cast SDK: tutto avviene solo sulla tua rete Wi-Fi locale.</p>
+
+    <h2>6. I siti che visiti nel browser interno</h2>
+    <p>Le pagine che apri sono <b>siti di terze parti</b>: possono usare cookie e tracker come in
+      qualunque browser. Beamcast <b>non aggiunge e non toglie</b> tracker, si limita a mostrare
+      le pagine. Ciò che quei siti raccolgono è regolato dalle loro informative, non da questa.</p>
+
+    <h2>7. I permessi che l'app richiede</h2>
+    <ul>
+      <li><b>Notifiche</b> (<code>POST_NOTIFICATIONS</code>): la notifica con i comandi di riproduzione. Se la neghi, la trasmissione funziona lo stesso.</li>
+      <li><b>Accesso ai media del telefono</b> (<code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code> e, fino ad Android 12, <code>READ_EXTERNAL_STORAGE</code>): sfogliare video, foto e musica per trasmetterli. Se lo neghi, puoi comunque scegliere un singolo file col selettore di sistema.</li>
+      <li><b>Servizio in primo piano</b> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): tenere viva la trasmissione mentre usi altre app.</li>
+      <li><b>Rete</b> (<code>INTERNET</code>): aprire le pagine e comunicare con i dispositivi.</li>
+      <li><b>Stato di rete e Wi-Fi</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): verificare il Wi-Fi e trovare i dispositivi DLNA in rete locale.</li>
+      <li><b>Blocco di sospensione</b> (<code>WAKE_LOCK</code>): richiesto dal lettore per l'anteprima locale dentro l'app.</li>
+      <li>Un permesso tecnico di sola firma (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) è generato dalle librerie di sistema Android e non è concedibile ad altre app.</li>
+    </ul>
+    <p>Beamcast <b>non</b> chiede posizione, rubrica, microfono, fotocamera, SMS o telefono.</p>
+
+    <h2>8. Backup e cambio del telefono</h2>
+    <p>Il <b>backup automatico è disattivato</b>. Cronologia, segnalibri, liste e punti di ripresa
+      <b>non</b> vengono copiati sul cloud e <b>non</b> passano a un telefono nuovo. È una scelta
+      di privacy: i tuoi dati restano su questo dispositivo.</p>
+
+    <h2>9. Come cancellare i tuoi dati</h2>
+    <ul>
+      <li><b>Dalle Impostazioni dell'app</b>: cronologia (Browser), punti di ripresa (Privacy), singole liste, elementi e segnalibri.</li>
+      <li><b>Dalle impostazioni di sistema</b>: "Cancella dati" rimuove tutto, cookie e cache dei siti compresi.</li>
+      <li><b>Disinstallando l'app</b>: elimina ogni dato salvato da Beamcast su questo telefono.</li>
+    </ul>
+    <p>I dati anonimi inviati dal Cast SDK (punto 5) fanno eccezione: come dichiara Google, non si possono cancellare.</p>
+
+    <h2>10. Minori</h2>
+    <p>Beamcast <b>non è rivolta a bambini di età inferiore a 13 anni</b> e non raccoglie
+      consapevolmente i loro dati. Poiché l'app include un browser che accede al web aperto,
+      consigliamo la supervisione di un adulto per gli utenti più giovani.</p>
+
+    <h2>11. Sicurezza dei dati</h2>
+    <p>I dati restano nell'area privata dell'app, non accessibile alle altre app. L'app <b>vieta
+      il traffico in chiaro verso Internet</b>. Sulla rete Wi-Fi locale la trasmissione ai
+      dispositivi può avvenire in chiaro, com'è inevitabile per DLNA e per i file locali: quei
+      dati non escono dalla tua rete.</p>
+
+    <h2>12. Modifiche a questa informativa</h2>
+    <p>Se cambiamo il modo in cui l'app tratta i dati, aggiorniamo questa informativa e la data e
+      versione in alto. Ti invitiamo a rileggerla di tanto in tanto.</p>
+
+    <h2>13. Contatti</h2>
+    <p><a href="mailto:beamcast.app@gmail.com">beamcast.app@gmail.com</a></p>
+  </main>
+
+  <!-- ENGLISH -->
+  <main id="en" hidden>
+    <h1 style="font-size:1.35rem">Privacy Policy</h1>
+    <p class="meta">Version 1.0 — 24 July 2026</p>
+    <p>Beamcast is an Android app that helps you find videos and other content — on the web or
+      on your phone — and cast them to a TV or a compatible device (Chromecast, Google Cast,
+      DLNA/UPnP). This policy explains, in plain language, what data Beamcast handles and where
+      it stays. It is not legal advice.</p>
+
+    <h2>1. In short</h2>
+    <ul>
+      <li>Beamcast <b>has no accounts, requires no sign-up, has no ads</b>, and does not profile you.</li>
+      <li>Your data (history, bookmarks, lists, preferences) <b>stays on this phone</b>. Beamcast has no server of its own and sends it to no one.</li>
+      <li>There is <b>one exception</b>: Google Cast technology sends some anonymous technical data to Google when you look for or use a casting device. It cannot be turned off (section 5).</li>
+      <li>You can delete your data at any time from the app or by uninstalling it.</li>
+    </ul>
+
+    <h2>2. Who runs Beamcast and how to contact us</h2>
+    <p>Beamcast is developed by Marco Forlin. For any question about this policy or your data,
+      write to <a href="mailto:beamcast.app@gmail.com">beamcast.app@gmail.com</a>.</p>
+
+    <h2>3. What Beamcast does not do</h2>
+    <ul>
+      <li><b>No account and no sign-up</b>: you use the app without providing a name, email, or phone number.</li>
+      <li><b>No advertising tracking</b>: no ad networks and no advertising identifiers.</li>
+      <li><b>No Beamcast analytics</b>: we do not collect usage statistics or crash reports with tools of our own.</li>
+      <li><b>No profiling</b> of your tastes or habits.</li>
+      <li><b>No Beamcast server</b> to send your data to.</li>
+    </ul>
+
+    <h2>4. The data that stays on your phone</h2>
+    <p>Beamcast stores some information <b>only in the app's private storage</b>. None of this
+      data leaves the phone.</p>
+    <div class="item"><b>Browsing history</b><span>Addresses and titles of pages visited in the built-in browser. Until you clear it. Settings → Browser → "Clear history", or turn off "Save history".</span></div>
+    <div class="item"><b>Bookmarks</b><span>The sites you save. As long as you keep them. Remove the individual bookmark.</span></div>
+    <div class="item"><b>Watchlists</b><span>Titles, addresses, covers, progress. As long as you keep them. Delete the list or the individual item.</span></div>
+    <div class="item"><b>Resume points</b><span>Where you stopped a piece of content. 90 days, up to 200 entries. Settings → Privacy → "Clear resume points".</span></div>
+    <div class="item"><b>Preferences</b><span>Theme, search engine, skip seconds, etc. While the app is installed. Uninstall or the system's "Clear data".</span></div>
+    <div class="item"><b>Open browser tabs</b><span>To find your pages again after a restart. Updated on every change. Close the tabs or "Clear data".</span></div>
+    <div class="item"><b>In-page site data in the WebView</b><span>Cookies, local storage, site cache. Managed by the WebView. The system's "Clear data".</span></div>
+    <div class="item"><b>Image cache</b><span>Covers and thumbnails. Temporary, cleared by the system. "Clear cache".</span></div>
+
+    <h2>5. The one exception: Google Cast</h2>
+    <p>To find and use Chromecast and Google Cast devices, Beamcast uses Google's <b>Cast SDK</b>.
+      Google states that this component <b>collects and sends to Google</b> some data when you look
+      for a device or start casting: generic discovery and session events, mobile device
+      information, and generic information about the app that is casting. According to Google, this
+      data:</p>
+    <ul>
+      <li>is <b>anonymous</b> and not linked to your identity;</li>
+      <li>helps Google understand the adoption of Cast SDK versions and improve the casting experience;</li>
+      <li><b>cannot be turned off and cannot be deleted</b> from the app;</li>
+      <li>is not shared by Google with third parties.</li>
+    </ul>
+    <p>Beamcast does not decide which data is sent and cannot switch this off. Details in
+      <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure">Google's Cast SDK data disclosure</a>.
+      <b>DLNA/UPnP</b> devices do not use the Cast SDK: everything happens only on your local Wi-Fi network.</p>
+
+    <h2>6. The sites you visit in the built-in browser</h2>
+    <p>The pages you open are <b>third-party sites</b>: they may use cookies and trackers as in any
+      browser. Beamcast <b>does not add and does not remove</b> trackers; it simply displays the
+      pages. What those sites collect is governed by their own privacy policies, not by this one.</p>
+
+    <h2>7. The permissions the app requests</h2>
+    <ul>
+      <li><b>Notifications</b> (<code>POST_NOTIFICATIONS</code>): to show the notification with playback controls. If you deny it, casting still works.</li>
+      <li><b>Access to the phone's media</b> (<code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code>, and, up to Android 12, <code>READ_EXTERNAL_STORAGE</code>): to browse videos, photos, and music and cast them. If you deny it, you can still pick a single file with the system picker.</li>
+      <li><b>Foreground service</b> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): to keep the cast alive while you use other apps.</li>
+      <li><b>Network</b> (<code>INTERNET</code>): to open pages and talk to casting devices.</li>
+      <li><b>Network and Wi-Fi state</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): to check you are on Wi-Fi and find DLNA devices on the local network.</li>
+      <li><b>Wake lock</b> (<code>WAKE_LOCK</code>): required by the player for the in-app local preview.</li>
+      <li>A signature-only technical permission (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) is generated by Android system libraries and cannot be granted to other apps.</li>
+    </ul>
+    <p>Beamcast does <b>not</b> request location, contacts, microphone, camera, SMS, or phone.</p>
+
+    <h2>8. Backup and changing phones</h2>
+    <p><b>Automatic backup is disabled</b>. History, bookmarks, lists, and resume points are
+      <b>not</b> copied to the cloud and are <b>not</b> transferred to a new phone. This is a
+      privacy choice: your data stays on this device.</p>
+
+    <h2>9. How to delete your data</h2>
+    <ul>
+      <li><b>From the app's Settings</b>: history (Browser), resume points (Privacy), individual lists, items, and bookmarks.</li>
+      <li><b>From Android's system settings</b>: "Clear data" removes everything, including site cookies and cache.</li>
+      <li><b>By uninstalling the app</b>: this removes all data Beamcast saved on this phone.</li>
+    </ul>
+    <p>The anonymous data sent by the Cast SDK (section 5) is the exception: as Google states, it cannot be deleted.</p>
+
+    <h2>10. Children</h2>
+    <p>Beamcast is <b>not directed to children under 13</b> and does not knowingly collect their
+      data. Because the app includes a browser that reaches the open web, we recommend adult
+      supervision for younger users.</p>
+
+    <h2>11. Data security</h2>
+    <p>The data stays in the app's private area, not accessible to other apps. The app <b>forbids
+      cleartext traffic to the Internet</b>. On the local Wi-Fi network, casting to devices may
+      happen in cleartext, as is unavoidable for DLNA and local files: that data does not leave
+      your network.</p>
+
+    <h2>12. Changes to this policy</h2>
+    <p>If we change how the app handles data, we update this policy and its date and version at the
+      top. We encourage you to re-read it from time to time.</p>
+
+    <h2>13. Contact</h2>
+    <p><a href="mailto:beamcast.app@gmail.com">beamcast.app@gmail.com</a></p>
+  </main>
+
+  <footer>© 2026 Marco Forlin · Beamcast</footer>
+</div>
+
+<script>
+  function setLang(l) {
+    document.getElementById('it').hidden = (l !== 'it');
+    document.getElementById('en').hidden = (l !== 'en');
+    document.getElementById('btn-it').setAttribute('aria-pressed', l === 'it');
+    document.getElementById('btn-en').setAttribute('aria-pressed', l === 'en');
+    document.documentElement.lang = l;
+  }
+  // Default: lingua del browser, italiano come fallback.
+  setLang((navigator.language || 'it').toLowerCase().startsWith('en') ? 'en' : 'it');
+</script>
+</body>
+</html>
