@@ -56,7 +56,7 @@
   <!-- ITALIANO -->
   <main id="it">
     <h1 style="font-size:1.35rem">Informativa sulla privacy</h1>
-    <p class="meta">Versione 1.0 — 24 luglio 2026</p>
+    <p class="meta">Versione 1.1 — 30 luglio 2026</p>
     <p>Beamcast è un'app per Android che ti aiuta a trovare video e altri contenuti — sul web
       o sul tuo telefono — e a trasmetterli su una TV o su un dispositivo compatibile
       (Chromecast, Google Cast, DLNA/UPnP). Questa informativa spiega, in parole semplici,
@@ -67,6 +67,7 @@
       <li>Beamcast <b>non ha account, non chiede registrazione, non ha pubblicità</b> e non ti profila.</li>
       <li>I tuoi dati (cronologia, segnalibri, liste, preferenze) <b>restano su questo telefono</b>. Beamcast non ha un proprio server e non li invia a nessuno.</li>
       <li>C'è <b>una sola eccezione</b>: la tecnologia Google Cast invia a Google alcuni dati tecnici e anonimi quando cerchi o usi un dispositivo di trasmissione. Non si può disattivare (punto 5).</li>
+      <li>Se scegli di sbloccare <b>Beamcast Premium</b>, il pagamento lo gestisce interamente <b>Google Play</b>: Beamcast non vede la tua carta, non conosce il tuo nome e non tiene un elenco dei tuoi acquisti. Non è un abbonamento (punto 6).</li>
       <li>Puoi cancellare i tuoi dati in qualsiasi momento dall'app o disinstallandola.</li>
     </ul>
 
@@ -111,12 +112,40 @@
       nella <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure">dichiarazione di Google sul Cast SDK</a>.
       I dispositivi <b>DLNA/UPnP</b> non usano il Cast SDK: tutto avviene solo sulla tua rete Wi-Fi locale.</p>
 
-    <h2>6. I siti che visiti nel browser interno</h2>
+    <h2>6. Gli acquisti in-app</h2>
+    <p>Beamcast si usa gratis: trasmettere non ha limiti e non ci sono pubblicità. C'è <b>un solo
+      acquisto, facoltativo</b> — "Beamcast Premium" — che si paga <b>una volta sola, per sempre</b>.
+      Non è un abbonamento: niente rinnovi, niente da disdire, niente che scada.</p>
+    <p><b>Il pagamento lo gestisce Google Play, non Beamcast.</b> Quando tocchi "Sblocca" si apre la
+      finestra di Google Play: i dati di pagamento li inserisci lì e restano lì. Beamcast <b>non vede</b>
+      il numero della tua carta, il tuo nome, il tuo indirizzo o la tua email, e non conosce nemmeno la
+      cifra che Google ti addebita: il prezzo che leggi nell'app è quello che Google le comunica, già
+      scritto nella tua valuta.</p>
+    <p><b>Cosa Beamcast sa dell'acquisto.</b> Una cosa sola: se l'account Google di questo telefono ha
+      comprato il premium oppure no. Lo chiede a Google Play e se ne ricorda sul telefono, scrivendo
+      <b>una sola parola</b> nella memoria privata dell'app — "sbloccato" o "non sbloccato". Non salva
+      ricevute, numeri d'ordine, date o importi, e non manda questa informazione a nessuno: Beamcast
+      <b>non ha un server</b>.</p>
+    <p><b>Se il pagamento resta in attesa.</b> Alcuni metodi di pagamento non si concludono subito. In
+      quel caso l'app te lo dice e non ti chiede niente: quando Google Play conferma, il premium si
+      attiva da sé.</p>
+    <p><b>Come si ripristina.</b> L'acquisto è legato al tuo <b>account Google</b>, non a Beamcast. Se
+      reinstalli l'app o cambi telefono torna da sé, appena Google Play lo conferma; se non succede, il
+      pulsante <b>"Ripristina acquisto"</b> nella schermata Premium lo richiede di nuovo. Non serve alcun
+      account Beamcast, perché non esiste. Anche <b>"Cancella dati"</b> del sistema non ti fa perdere
+      l'acquisto: si cancella la parola scritta sul telefono, non ciò che sa Google Play.</p>
+    <p><b>Rimborsi e storico degli acquisti passano da Google.</b> È Google che vende e incassa: per
+      chiedere un rimborso o rivedere i tuoi acquisti usa Google Play (l'app Play Store o
+      <a href="https://play.google.com">play.google.com</a>). Come sviluppatore riceviamo da Google i
+      resoconti degli ordini per la contabilità e per gestire i rimborsi, secondo i termini di Google
+      Play: non arrivano dall'app e non contengono i dati della tua carta.</p>
+
+    <h2>7. I siti che visiti nel browser interno</h2>
     <p>Le pagine che apri sono <b>siti di terze parti</b>: possono usare cookie e tracker come in
       qualunque browser. Beamcast <b>non aggiunge e non toglie</b> tracker, si limita a mostrare
       le pagine. Ciò che quei siti raccolgono è regolato dalle loro informative, non da questa.</p>
 
-    <h2>7. I permessi che l'app richiede</h2>
+    <h2>8. I permessi che l'app richiede</h2>
     <ul>
       <li><b>Notifiche</b> (<code>POST_NOTIFICATIONS</code>): la notifica con i comandi di riproduzione. Se la neghi, la trasmissione funziona lo stesso.</li>
       <li><b>Accesso ai media del telefono</b> (<code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code> e, fino ad Android 12, <code>READ_EXTERNAL_STORAGE</code>): sfogliare video, foto e musica per trasmetterli. Se lo neghi, puoi comunque scegliere un singolo file col selettore di sistema.</li>
@@ -124,16 +153,17 @@
       <li><b>Rete</b> (<code>INTERNET</code>): aprire le pagine e comunicare con i dispositivi.</li>
       <li><b>Stato di rete e Wi-Fi</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): verificare il Wi-Fi e trovare i dispositivi DLNA in rete locale.</li>
       <li><b>Blocco di sospensione</b> (<code>WAKE_LOCK</code>): richiesto dal lettore per l'anteprima locale dentro l'app.</li>
+      <li><b>Acquisti in-app</b> (<code>com.android.vending.BILLING</code>): collegarsi all'app Google Play per l'acquisto facoltativo del premium (punto 6). Lo richiede la libreria di Google Play; non dà a Beamcast accesso ad alcun tuo dato e non compare se non fai acquisti.</li>
       <li>Un permesso tecnico di sola firma (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) è generato dalle librerie di sistema Android e non è concedibile ad altre app.</li>
     </ul>
     <p>Beamcast <b>non</b> chiede posizione, rubrica, microfono, fotocamera, SMS o telefono.</p>
 
-    <h2>8. Backup e cambio del telefono</h2>
+    <h2>9. Backup e cambio del telefono</h2>
     <p>Il <b>backup automatico è disattivato</b>. Cronologia, segnalibri, liste e punti di ripresa
       <b>non</b> vengono copiati sul cloud e <b>non</b> passano a un telefono nuovo. È una scelta
       di privacy: i tuoi dati restano su questo dispositivo.</p>
 
-    <h2>9. Come cancellare i tuoi dati</h2>
+    <h2>10. Come cancellare i tuoi dati</h2>
     <ul>
       <li><b>Dalle Impostazioni dell'app</b>: cronologia (Browser), punti di ripresa (Privacy), singole liste, elementi e segnalibri.</li>
       <li><b>Dalle impostazioni di sistema</b>: "Cancella dati" rimuove tutto, cookie e cache dei siti compresi.</li>
@@ -141,29 +171,32 @@
     </ul>
     <p>I dati anonimi inviati dal Cast SDK (punto 5) fanno eccezione: come dichiara Google, non si possono cancellare.</p>
 
-    <h2>10. Minori</h2>
+    <h2>11. Minori</h2>
     <p>Beamcast <b>non è rivolta a bambini di età inferiore a 13 anni</b> e non raccoglie
       consapevolmente i loro dati. Poiché l'app include un browser che accede al web aperto,
       consigliamo la supervisione di un adulto per gli utenti più giovani.</p>
 
-    <h2>11. Sicurezza dei dati</h2>
+    <h2>12. Sicurezza dei dati</h2>
     <p>I dati restano nell'area privata dell'app, non accessibile alle altre app. L'app <b>vieta
       il traffico in chiaro verso Internet</b>. Sulla rete Wi-Fi locale la trasmissione ai
       dispositivi può avvenire in chiaro, com'è inevitabile per DLNA e per i file locali: quei
       dati non escono dalla tua rete.</p>
 
-    <h2>12. Modifiche a questa informativa</h2>
+    <h2>13. Modifiche a questa informativa</h2>
     <p>Se cambiamo il modo in cui l'app tratta i dati, aggiorniamo questa informativa e la data e
       versione in alto. Ti invitiamo a rileggerla di tanto in tanto.</p>
+    <p><b>Cosa è cambiato nella versione 1.1</b> (30 luglio 2026): è stato aggiunto il <b>punto 6</b>,
+      sugli acquisti in-app, perché l'app offre ora lo sblocco facoltativo di Beamcast Premium. Rispetto
+      alla versione 1.0 <b>non viene raccolto alcun dato in più</b>.</p>
 
-    <h2>13. Contatti</h2>
+    <h2>14. Contatti</h2>
     <p><a href="mailto:beamcast.app@gmail.com">beamcast.app@gmail.com</a></p>
   </main>
 
   <!-- ENGLISH -->
   <main id="en" hidden>
     <h1 style="font-size:1.35rem">Privacy Policy</h1>
-    <p class="meta">Version 1.0 — 24 July 2026</p>
+    <p class="meta">Version 1.1 — 30 July 2026</p>
     <p>Beamcast is an Android app that helps you find videos and other content — on the web or
       on your phone — and cast them to a TV or a compatible device (Chromecast, Google Cast,
       DLNA/UPnP). This policy explains, in plain language, what data Beamcast handles and where
@@ -174,6 +207,7 @@
       <li>Beamcast <b>has no accounts, requires no sign-up, has no ads</b>, and does not profile you.</li>
       <li>Your data (history, bookmarks, lists, preferences) <b>stays on this phone</b>. Beamcast has no server of its own and sends it to no one.</li>
       <li>There is <b>one exception</b>: Google Cast technology sends some anonymous technical data to Google when you look for or use a casting device. It cannot be turned off (section 5).</li>
+      <li>If you choose to unlock <b>Beamcast Premium</b>, the payment is handled entirely by <b>Google Play</b>: Beamcast does not see your card, does not know your name, and keeps no list of your purchases. It is not a subscription (section 6).</li>
       <li>You can delete your data at any time from the app or by uninstalling it.</li>
     </ul>
 
@@ -218,12 +252,40 @@
       <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure">Google's Cast SDK data disclosure</a>.
       <b>DLNA/UPnP</b> devices do not use the Cast SDK: everything happens only on your local Wi-Fi network.</p>
 
-    <h2>6. The sites you visit in the built-in browser</h2>
+    <h2>6. In-app purchases</h2>
+    <p>Beamcast is free to use: casting has no limits and there are no ads. There is <b>one optional
+      purchase</b> — "Beamcast Premium" — paid <b>once, forever</b>. It is not a subscription: nothing to
+      renew, nothing to cancel, nothing that expires.</p>
+    <p><b>The payment is handled by Google Play, not by Beamcast.</b> When you tap "Unlock", Google Play's
+      own window opens: you enter your payment details there, and they stay there. Beamcast <b>does not
+      see</b> your card number, your name, your address, or your email, and does not even know the amount
+      Google charges you: the price you read in the app is the one Google gives it, already written in your
+      currency.</p>
+    <p><b>What Beamcast knows about the purchase.</b> One thing only: whether this phone's Google account
+      has bought premium or not. It asks Google Play and remembers the answer on the phone by writing
+      <b>a single word</b> in the app's private storage — "unlocked" or "not unlocked". It saves no
+      receipts, no order numbers, no dates, and no amounts, and it sends this information to no one:
+      Beamcast <b>has no server</b>.</p>
+    <p><b>If the payment is left pending.</b> Some payment methods do not complete straight away. If that
+      happens the app tells you so and asks nothing of you: when Google Play confirms, premium activates by
+      itself.</p>
+    <p><b>How to restore it.</b> The purchase is tied to your <b>Google account</b>, not to Beamcast. If you
+      reinstall the app or change phones it comes back on its own, as soon as Google Play confirms it; if it
+      does not, the <b>"Restore purchase"</b> button on the Premium screen asks again. No Beamcast account is
+      needed, because none exists. The system's <b>"Clear data"</b> does not lose your purchase either: what
+      it clears is the word written on the phone, not what Google Play knows.</p>
+    <p><b>Refunds and purchase history go through Google.</b> Google is the one that sells and takes payment:
+      to request a refund or review your purchases, use Google Play (the Play Store app or
+      <a href="https://play.google.com">play.google.com</a>). As the developer we receive order reports from
+      Google for accounting and to handle refunds, under the Google Play terms: they do not come from the app
+      and they do not contain your card details.</p>
+
+    <h2>7. The sites you visit in the built-in browser</h2>
     <p>The pages you open are <b>third-party sites</b>: they may use cookies and trackers as in any
       browser. Beamcast <b>does not add and does not remove</b> trackers; it simply displays the
       pages. What those sites collect is governed by their own privacy policies, not by this one.</p>
 
-    <h2>7. The permissions the app requests</h2>
+    <h2>8. The permissions the app requests</h2>
     <ul>
       <li><b>Notifications</b> (<code>POST_NOTIFICATIONS</code>): to show the notification with playback controls. If you deny it, casting still works.</li>
       <li><b>Access to the phone's media</b> (<code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code>, and, up to Android 12, <code>READ_EXTERNAL_STORAGE</code>): to browse videos, photos, and music and cast them. If you deny it, you can still pick a single file with the system picker.</li>
@@ -231,16 +293,17 @@
       <li><b>Network</b> (<code>INTERNET</code>): to open pages and talk to casting devices.</li>
       <li><b>Network and Wi-Fi state</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): to check you are on Wi-Fi and find DLNA devices on the local network.</li>
       <li><b>Wake lock</b> (<code>WAKE_LOCK</code>): required by the player for the in-app local preview.</li>
+      <li><b>In-app purchases</b> (<code>com.android.vending.BILLING</code>): to connect to the Google Play app for the optional premium purchase (section 6). Google's billing library requires it; it gives Beamcast access to none of your data and does nothing if you make no purchase.</li>
       <li>A signature-only technical permission (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) is generated by Android system libraries and cannot be granted to other apps.</li>
     </ul>
     <p>Beamcast does <b>not</b> request location, contacts, microphone, camera, SMS, or phone.</p>
 
-    <h2>8. Backup and changing phones</h2>
+    <h2>9. Backup and changing phones</h2>
     <p><b>Automatic backup is disabled</b>. History, bookmarks, lists, and resume points are
       <b>not</b> copied to the cloud and are <b>not</b> transferred to a new phone. This is a
       privacy choice: your data stays on this device.</p>
 
-    <h2>9. How to delete your data</h2>
+    <h2>10. How to delete your data</h2>
     <ul>
       <li><b>From the app's Settings</b>: history (Browser), resume points (Privacy), individual lists, items, and bookmarks.</li>
       <li><b>From Android's system settings</b>: "Clear data" removes everything, including site cookies and cache.</li>
@@ -248,22 +311,25 @@
     </ul>
     <p>The anonymous data sent by the Cast SDK (section 5) is the exception: as Google states, it cannot be deleted.</p>
 
-    <h2>10. Children</h2>
+    <h2>11. Children</h2>
     <p>Beamcast is <b>not directed to children under 13</b> and does not knowingly collect their
       data. Because the app includes a browser that reaches the open web, we recommend adult
       supervision for younger users.</p>
 
-    <h2>11. Data security</h2>
+    <h2>12. Data security</h2>
     <p>The data stays in the app's private area, not accessible to other apps. The app <b>forbids
       cleartext traffic to the Internet</b>. On the local Wi-Fi network, casting to devices may
       happen in cleartext, as is unavoidable for DLNA and local files: that data does not leave
       your network.</p>
 
-    <h2>12. Changes to this policy</h2>
+    <h2>13. Changes to this policy</h2>
     <p>If we change how the app handles data, we update this policy and its date and version at the
       top. We encourage you to re-read it from time to time.</p>
+    <p><b>What changed in version 1.1</b> (30 July 2026): <b>section 6</b>, on in-app purchases, was
+      added, because the app now offers the optional unlock of Beamcast Premium. Compared with version
+      1.0, <b>no additional data is collected</b>.</p>
 
-    <h2>13. Contact</h2>
+    <h2>14. Contact</h2>
     <p><a href="mailto:beamcast.app@gmail.com">beamcast.app@gmail.com</a></p>
   </main>
 
