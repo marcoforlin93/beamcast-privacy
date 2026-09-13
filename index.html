@@ -56,7 +56,7 @@
   <!-- ITALIANO -->
   <main id="it">
     <h1 style="font-size:1.35rem">Informativa sulla privacy</h1>
-    <p class="meta">Versione 1.2 — 4 agosto 2026</p>
+    <p class="meta">Versione 1.4 — 12 settembre 2026</p>
     <p>Beamcast è un'app per Android che ti aiuta a trovare video e altri contenuti — sul web
       o sul tuo telefono — e a trasmetterli su una TV o su un dispositivo compatibile
       (Chromecast, Google Cast, DLNA/UPnP). Questa informativa spiega, in parole semplici,
@@ -147,12 +147,12 @@
 
     <h2>8. I permessi che l'app richiede</h2>
     <ul>
-      <li><b>Notifiche</b> (<code>POST_NOTIFICATIONS</code>): la notifica con i comandi di riproduzione. Se la neghi, la trasmissione funziona lo stesso.</li>
+      <li><b>Notifiche</b> (<code>POST_NOTIFICATIONS</code>): la notifica con i comandi di riproduzione e, se una lista si ferma mentre Beamcast non è sullo schermo (per esempio a schermo bloccato) perché l'episodio successivo va ritrovato dalla sua pagina, l'avviso che lo dice. Se la neghi, la trasmissione funziona lo stesso.</li>
       <li><b>Accesso ai media del telefono</b> (<code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code> e, fino ad Android 12, <code>READ_EXTERNAL_STORAGE</code>): sfogliare video, foto e musica per trasmetterli. Se lo neghi, puoi comunque scegliere un singolo file col selettore di sistema.</li>
       <li><b>Servizio in primo piano</b> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): tenere viva la trasmissione mentre usi altre app.</li>
       <li><b>Rete</b> (<code>INTERNET</code>): aprire le pagine e comunicare con i dispositivi.</li>
       <li><b>Stato di rete e Wi-Fi</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): verificare il Wi-Fi e trovare i dispositivi DLNA in rete locale.</li>
-      <li><b>Blocco di sospensione</b> (<code>WAKE_LOCK</code>): richiesto dal lettore per l'anteprima locale dentro l'app.</li>
+      <li><b>Blocco di sospensione</b> (<code>WAKE_LOCK</code>): tenere sveglio il telefono il tempo che serve a far partire da solo il contenuto successivo di una coda, anche a schermo bloccato — al più negli ultimi due minuti di un contenuto e nel passaggio al successivo, mai per tutta la trasmissione. Lo usa anche il lettore per l'anteprima locale dentro l'app.</li>
       <li><b>Acquisti in-app</b> (<code>com.android.vending.BILLING</code>): collegarsi all'app Google Play per l'acquisto facoltativo del premium (punto 6). Lo richiede la libreria di Google Play; non dà a Beamcast accesso ad alcun tuo dato e non compare se non fai acquisti.</li>
       <li>Un permesso tecnico di sola firma (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) è generato dalle librerie di sistema Android e non è concedibile ad altre app.</li>
     </ul>
@@ -202,6 +202,17 @@
     <h2>13. Modifiche a questa informativa</h2>
     <p>Se cambiamo il modo in cui l'app tratta i dati, aggiorniamo questa informativa e la data e
       versione in alto. Ti invitiamo a rileggerla di tanto in tanto.</p>
+    <p><b>Cosa è cambiato nella versione 1.4</b> (12 settembre 2026): nel <b>punto 8</b> le notifiche
+      (<code>POST_NOTIFICATIONS</code>) non servono più solo ai comandi di riproduzione: se una lista si
+      ferma mentre Beamcast non è sullo schermo (per esempio a schermo bloccato) perché l'episodio
+      successivo va ritrovato dalla sua pagina, una notifica lo dice e ne nomina il titolo. Resta sul
+      telefono, non è un permesso nuovo e, rispetto alla versione 1.3, <b>non viene raccolto alcun
+      dato in più</b>.</p>
+    <p><b>Cosa è cambiato nella versione 1.3</b> (12 settembre 2026): nel <b>punto 8</b> il blocco
+      di sospensione (<code>WAKE_LOCK</code>) non serve più solo all'anteprima: Beamcast lo usa anche
+      per tenere sveglio il telefono nel passaggio da un contenuto al successivo di una coda, così la
+      puntata dopo parte anche a schermo bloccato. Non è un permesso nuovo e, rispetto alla versione
+      1.2, <b>non viene raccolto alcun dato in più</b>.</p>
     <p><b>Cosa è cambiato nella versione 1.2</b> (4 agosto 2026): il <b>punto 9</b> ora descrive
       l'<b>esportazione e l'importazione dei tuoi dati su file</b>, la funzione che permette di
       cambiare telefono senza perdere liste, segnalibri e impostazioni. Rispetto alla versione 1.1
@@ -218,7 +229,7 @@
   <!-- ENGLISH -->
   <main id="en" hidden>
     <h1 style="font-size:1.35rem">Privacy Policy</h1>
-    <p class="meta">Version 1.2 — 4 August 2026</p>
+    <p class="meta">Version 1.4 — 12 September 2026</p>
     <p>Beamcast is an Android app that helps you find videos and other content — on the web or
       on your phone — and cast them to a TV or a compatible device (Chromecast, Google Cast,
       DLNA/UPnP). This policy explains, in plain language, what data Beamcast handles and where
@@ -309,12 +320,12 @@
 
     <h2>8. The permissions the app requests</h2>
     <ul>
-      <li><b>Notifications</b> (<code>POST_NOTIFICATIONS</code>): to show the notification with playback controls. If you deny it, casting still works.</li>
+      <li><b>Notifications</b> (<code>POST_NOTIFICATIONS</code>): to show the notification with playback controls and, when a list stops while Beamcast isn't on screen (for example with the screen locked) because the next episode has to be found again on its page, the notice that says so. If you deny it, casting still works.</li>
       <li><b>Access to the phone's media</b> (<code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code>, and, up to Android 12, <code>READ_EXTERNAL_STORAGE</code>): to browse videos, photos, and music and cast them. If you deny it, you can still pick a single file with the system picker.</li>
       <li><b>Foreground service</b> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): to keep the cast alive while you use other apps.</li>
       <li><b>Network</b> (<code>INTERNET</code>): to open pages and talk to casting devices.</li>
       <li><b>Network and Wi-Fi state</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): to check you are on Wi-Fi and find DLNA devices on the local network.</li>
-      <li><b>Wake lock</b> (<code>WAKE_LOCK</code>): required by the player for the in-app local preview.</li>
+      <li><b>Wake lock</b> (<code>WAKE_LOCK</code>): to keep the phone awake just long enough for the next item in a queue to start on its own, even with the screen locked — at most during the last two minutes of an item and the switch to the next one, never for the whole cast. The player also uses it for the in-app local preview.</li>
       <li><b>In-app purchases</b> (<code>com.android.vending.BILLING</code>): to connect to the Google Play app for the optional premium purchase (section 6). Google's billing library requires it; it gives Beamcast access to none of your data and does nothing if you make no purchase.</li>
       <li>A signature-only technical permission (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) is generated by Android system libraries and cannot be granted to other apps.</li>
     </ul>
@@ -363,6 +374,17 @@
     <h2>13. Changes to this policy</h2>
     <p>If we change how the app handles data, we update this policy and its date and version at the
       top. We encourage you to re-read it from time to time.</p>
+    <p><b>What changed in version 1.4</b> (12 September 2026): in <b>section 8</b>, notifications
+      (<code>POST_NOTIFICATIONS</code>) are no longer used only for playback controls: when a list
+      stops while Beamcast isn't on screen (for example with the screen locked) because the next
+      episode has to be found again on its page, a notification says so and names the episode. It
+      stays on your phone, it is not a new permission and, compared with version 1.3, <b>no
+      additional data is collected</b>.</p>
+    <p><b>What changed in version 1.3</b> (12 September 2026): in <b>section 8</b>, the wake lock
+      (<code>WAKE_LOCK</code>) is no longer used only for the preview: Beamcast also uses it to keep
+      the phone awake while a queue moves on from one item to the next, so the next episode starts
+      even with the screen locked. It is not a new permission and, compared with version 1.2,
+      <b>no additional data is collected</b>.</p>
     <p><b>What changed in version 1.2</b> (4 August 2026): <b>section 9</b> now describes
       <b>exporting and importing your data to a file</b>, the feature that lets you change phone
       without losing your lists, bookmarks and settings. Compared with version 1.1, <b>no additional
