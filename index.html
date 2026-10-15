@@ -56,11 +56,11 @@
   <!-- ITALIANO -->
   <main id="it">
     <h1 style="font-size:1.35rem">Informativa sulla privacy</h1>
-    <p class="meta">Versione 1.5 — 30 settembre 2026</p>
+    <p class="meta">Versione 1.6 — 14 ottobre 2026</p>
     <p>Beamcast è un'app per Android che ti aiuta a trovare video e altri contenuti — sul web
       o sul tuo telefono — e a trasmetterli su una TV o su un dispositivo compatibile
-      (Chromecast, Google Cast, DLNA/UPnP). Questa informativa spiega, in parole semplici,
-      quali dati Beamcast tratta e dove restano. Non è una consulenza legale.</p>
+      (Chromecast, Google Cast, DLNA/UPnP, TV LG con webOS). Questa informativa spiega, in
+      parole semplici, quali dati Beamcast tratta e dove restano. Non è una consulenza legale.</p>
 
     <h2>1. In sintesi</h2>
     <ul>
@@ -95,6 +95,9 @@
     <div class="item"><b>Schede aperte del browser</b><span>Per ritrovare le pagine dopo un riavvio. Aggiornata a ogni cambio. Chiudi le schede o "Cancella dati".</span></div>
     <div class="item"><b>Dati dei siti nella WebView</b><span>Cookie, memoria locale, cache dei siti. Gestita dalla WebView. "Cancella dati" del sistema.</span></div>
     <div class="item"><b>Cache delle immagini</b><span>Copertine e anteprime. Temporanea, ripulita dal sistema. "Svuota cache".</span></div>
+    <div class="item"><b>Abbinamenti con le TV LG</b><span>La chiave che una TV LG con webOS dà a Beamcast quando accetti la richiesta di collegamento, e l'impronta del certificato della TV. Per ricollegarsi a quella TV senza chiederti di nuovo il permesso, e riconoscerla. Finché non la dimentichi. "Dimentica abbinamento" nel menù della riga LG webOS, oppure "Cancella dati" del sistema.</span></div>
+    <p>La chiave torna solo alla TV che l'ha data, sulla tua rete Wi-Fi, e non entra nel file di
+      esportazione.</p>
 
     <h2>5. Le due eccezioni: Google Cast e Google Play Billing</h2>
     <p><b>Google Cast.</b> Per trovare e usare i dispositivi Chromecast e Google Cast, Beamcast usa il <b>Cast SDK</b>
@@ -110,7 +113,7 @@
     </ul>
     <p>Beamcast non decide quali dati partono e non può spegnere questo comportamento. Dettagli
       nella <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure">dichiarazione di Google sul Cast SDK</a>.
-      I dispositivi <b>DLNA/UPnP</b> non usano il Cast SDK: tutto avviene solo sulla tua rete Wi-Fi locale.</p>
+      I dispositivi <b>DLNA/UPnP</b> e le <b>TV LG con webOS</b> non usano il Cast SDK: tutto avviene solo sulla tua rete Wi-Fi locale.</p>
     <p><b>Google Play Billing.</b> Per l'acquisto facoltativo del premium (punto 6) Beamcast usa la
       <b>libreria di Google Play Billing</b>. Questa libreria invia direttamente a Google dati tecnici
       sul proprio funzionamento: lo fa ogni volta che si collega a Google Play e se ne scollega, cioè
@@ -171,7 +174,7 @@
       <li><b>Accesso ai media del telefono</b> (<code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code> e, fino ad Android 12, <code>READ_EXTERNAL_STORAGE</code>): sfogliare video, foto e musica per trasmetterli. Se lo neghi, puoi comunque scegliere un singolo file col selettore di sistema.</li>
       <li><b>Servizio in primo piano</b> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): tenere viva la trasmissione mentre usi altre app.</li>
       <li><b>Rete</b> (<code>INTERNET</code>): aprire le pagine e comunicare con i dispositivi.</li>
-      <li><b>Stato di rete e Wi-Fi</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): verificare il Wi-Fi e trovare i dispositivi DLNA in rete locale.</li>
+      <li><b>Stato di rete e Wi-Fi</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): verificare il Wi-Fi e trovare i dispositivi DLNA e le TV LG in rete locale.</li>
       <li><b>Blocco di sospensione</b> (<code>WAKE_LOCK</code>): tenere sveglio il telefono il tempo che serve a far partire da solo il contenuto successivo di una coda, anche a schermo bloccato — al più negli ultimi due minuti di un contenuto e nel passaggio al successivo, mai per tutta la trasmissione. Lo usa anche il lettore per l'anteprima locale dentro l'app.</li>
       <li><b>Acquisti in-app</b> (<code>com.android.vending.BILLING</code>): collegarsi all'app Google Play per l'acquisto facoltativo del premium (punto 6). Lo richiede la libreria di Google Play. Beamcast si collega a Google Play ogni volta che apri l'app, anche se non compri niente, per leggere i prezzi e sapere se hai già sbloccato il premium, per esempio dopo una reinstallazione; in quei momenti la libreria invia a Google i dati tecnici descritti al punto 5.</li>
       <li>Un permesso tecnico di sola firma (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) è generato dalle librerie di sistema Android e non è concedibile ad altre app.</li>
@@ -216,12 +219,16 @@
     <h2>12. Sicurezza dei dati</h2>
     <p>I dati restano nell'area privata dell'app, non accessibile alle altre app. L'app <b>vieta
       il traffico in chiaro verso Internet</b>. Sulla rete Wi-Fi locale la trasmissione ai
-      dispositivi può avvenire in chiaro, com'è inevitabile per DLNA e per i file locali: quei
-      dati non escono dalla tua rete.</p>
+      dispositivi può avvenire in chiaro, com'è inevitabile per DLNA, per i file locali e per la
+      pagina che Beamcast apre sulle TV LG: quei dati non escono dalla tua rete.</p>
 
     <h2>13. Modifiche a questa informativa</h2>
     <p>Se cambiamo il modo in cui l'app tratta i dati, aggiorniamo questa informativa e la data e
       versione in alto. Ti invitiamo a rileggerla di tanto in tanto.</p>
+    <p><b>Cosa è cambiato nella versione 1.6</b> (14 ottobre 2026): Beamcast funziona anche con le
+      TV LG con webOS. Il <b>punto 4</b> elenca l'abbinamento con queste TV, che resta sul
+      telefono, e il <b>punto 12</b> la pagina che l'app apre nel loro browser. Nessun permesso è
+      nuovo, e <b>l'app non raccoglie alcun dato in più</b>.</p>
     <p><b>Cosa è cambiato nella versione 1.5</b> (30 settembre 2026): il <b>punto 5</b> ha una
       seconda eccezione, la libreria di Google Play per gli acquisti, che invia a Google dati tecnici
       sul proprio funzionamento ogni volta che l'app si collega a Google Play o se ne scollega, anche
@@ -264,11 +271,11 @@
   <!-- ENGLISH -->
   <main id="en" hidden>
     <h1 style="font-size:1.35rem">Privacy Policy</h1>
-    <p class="meta">Version 1.5 — 30 September 2026</p>
+    <p class="meta">Version 1.6 — 14 October 2026</p>
     <p>Beamcast is an Android app that helps you find videos and other content — on the web or
       on your phone — and cast them to a TV or a compatible device (Chromecast, Google Cast,
-      DLNA/UPnP). This policy explains, in plain language, what data Beamcast handles and where
-      it stays. It is not legal advice.</p>
+      DLNA/UPnP, LG TVs with webOS). This policy explains, in plain language, what data Beamcast
+      handles and where it stays. It is not legal advice.</p>
 
     <h2>1. In short</h2>
     <ul>
@@ -303,6 +310,9 @@
     <div class="item"><b>Open browser tabs</b><span>To find your pages again after a restart. Updated on every change. Close the tabs or "Clear data".</span></div>
     <div class="item"><b>In-page site data in the WebView</b><span>Cookies, local storage, site cache. Managed by the WebView. The system's "Clear data".</span></div>
     <div class="item"><b>Image cache</b><span>Covers and thumbnails. Temporary, cleared by the system. "Clear cache".</span></div>
+    <div class="item"><b>Pairings with LG TVs</b><span>The key an LG webOS TV gives Beamcast when you accept its connection request, and the fingerprint of the TV's certificate. To reconnect to that TV without asking you again, and to recognize it. Until you forget it. "Forget pairing" in the menu of the LG webOS entry, or the system's "Clear data".</span></div>
+    <p>The key only goes back to the TV that issued it, on your Wi-Fi network, and is not included
+      in the export file.</p>
 
     <h2>5. The two exceptions: Google Cast and Google Play Billing</h2>
     <p><b>Google Cast.</b> To find and use Chromecast and Google Cast devices, Beamcast uses Google's <b>Cast SDK</b>.
@@ -318,7 +328,7 @@
     </ul>
     <p>Beamcast does not decide which data is sent and cannot switch this off. Details in
       <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure">Google's Cast SDK data disclosure</a>.
-      <b>DLNA/UPnP</b> devices do not use the Cast SDK: everything happens only on your local Wi-Fi network.</p>
+      <b>DLNA/UPnP</b> devices and <b>LG TVs with webOS</b> do not use the Cast SDK: everything happens only on your local Wi-Fi network.</p>
     <p><b>Google Play Billing.</b> For the optional premium purchase (section 6), Beamcast uses
       Google's <b>Play Billing Library</b>. This library sends technical data about how it is working
       directly to Google: it does so every time it connects to Google Play or disconnects from it,
@@ -379,7 +389,7 @@
       <li><b>Access to the phone's media</b> (<code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code>, and, up to Android 12, <code>READ_EXTERNAL_STORAGE</code>): to browse videos, photos, and music and cast them. If you deny it, you can still pick a single file with the system picker.</li>
       <li><b>Foreground service</b> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): to keep the cast alive while you use other apps.</li>
       <li><b>Network</b> (<code>INTERNET</code>): to open pages and talk to casting devices.</li>
-      <li><b>Network and Wi-Fi state</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): to check you are on Wi-Fi and find DLNA devices on the local network.</li>
+      <li><b>Network and Wi-Fi state</b> (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>): to check you are on Wi-Fi and find DLNA devices and LG TVs on the local network.</li>
       <li><b>Wake lock</b> (<code>WAKE_LOCK</code>): to keep the phone awake just long enough for the next item in a queue to start on its own, even with the screen locked — at most during the last two minutes of an item and the switch to the next one, never for the whole cast. The player also uses it for the in-app local preview.</li>
       <li><b>In-app purchases</b> (<code>com.android.vending.BILLING</code>): to connect to the Google Play app for the optional premium purchase (section 6). Google's billing library requires it. Beamcast connects to Google Play every time you open the app, even if you never buy anything, to read the prices and to know whether you have already unlocked premium, for example after reinstalling; at those moments the library sends Google the technical data described in section 5.</li>
       <li>A signature-only technical permission (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) is generated by Android system libraries and cannot be granted to other apps.</li>
@@ -423,12 +433,16 @@
     <h2>12. Data security</h2>
     <p>The data stays in the app's private area, not accessible to other apps. The app <b>forbids
       cleartext traffic to the Internet</b>. On the local Wi-Fi network, casting to devices may
-      happen in cleartext, as is unavoidable for DLNA and local files: that data does not leave
-      your network.</p>
+      happen in cleartext, as is unavoidable for DLNA, for local files and for the page Beamcast
+      opens on LG TVs: that data does not leave your network.</p>
 
     <h2>13. Changes to this policy</h2>
     <p>If we change how the app handles data, we update this policy and its date and version at the
       top. We encourage you to re-read it from time to time.</p>
+    <p><b>What changed in version 1.6</b> (14 October 2026): Beamcast also works with LG TVs with
+      webOS. <b>Section 4</b> lists the pairing with these TVs, which stays on the phone, and
+      <b>section 12</b> the page the app opens in their browser. No permission is new, and <b>the
+      app collects no additional data</b>.</p>
     <p><b>What changed in version 1.5</b> (30 September 2026): <b>section 5</b> has a second
       exception, Google Play's billing library, which sends Google technical data about how it is
       working every time the app connects to Google Play or disconnects from it, even if you never
